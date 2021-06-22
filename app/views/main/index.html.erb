@@ -1,0 +1,81 @@
+  <nav class="nav side-nav">
+    <div class="border-bottom py-4 px-2">
+      <div class="d-flex py-5 px-2">
+        <div><img src="" alt=""></div>
+        <span>
+         
+        </span>
+        <span>Number of Tweets</span>
+      </div>
+      <div class="display-flex">
+        <span>FOLLOWERS</span>
+        <span>FOLLOWING</span>
+      </div>
+    </div>
+    <ul class="nav nav-pills flex-column">
+      <li class="nav-item active opts" aria-current="page" href="#"><a href="" class="blue"><i class="nav-icons fas fa-home me-3"></i>HOME</a></li>
+      <li class="nav-item opts"><a href="#" class="blue"><i class="nav-icons fas fa-at me-3"></i>CONNECT</a></li>
+      <li class="nav-item opts"><a href="#" class="blue"><i class="nav-icons fas fa-hashtag me-3"></i>DISCOVER</li></a>
+      <li class="nav-item opts"><i class="nav-icons fas fa-user-circle me-3"></i>PROFILE</li>
+      <li class="nav-item opts"><a href="#" class="blue"><i class="nav-icons fas fa-chart-pie me-3"></i>STATISTICS</a></li>
+      <li class="nav-item opts"><%= link_to logout_path(:user_id), method: :delete, class: "blue" do %><i class="nav-icons fas fa-user-circle me-3"></i>LOG OUT<%end%></li>
+    </ul>
+  </nav>
+  <div class="right-container">
+    <header class="nav top-nav d-flex justify-content-between">
+      <i class="fa fa-twitter tw-icon my-auto ms-5"></i>
+      <ul class="nav">
+        <li class="my-auto"><a href="#" class="blue"><i class="fa fa-pen header-icon m-3"></i></a></li>
+        <li class="my-auto"><a href="#" class="blue"><i class="fa fa-envelope header-icon m-3"></i></a></li>
+        <li class="my-auto"><a href="#" class="blue"><i class="fa fa-search header-icon m-3"></i></a></li>
+        <li class="my-auto"><a href="#" class="blue"><i class="fa fa-cog header-icon m-3"></i></a></li>
+      </ul>
+    </header>
+    <div class="d-flex w-100 h-100">
+      <div class="w-100">
+        <ul class="nav nav-tabs mb-3">
+          <li class="dark-gray fw-bold border-bottom border-5 border-lightblue">TWEETS</li>
+          <li class="gray">PHOTOS</li>
+          <li class="gray">VIDEOS</li>
+        </ul>
+        <div>
+          <div class="tw-something bg-white p-4">
+            <p>TWEET SOMETHING</p>
+            <div class="input-group border-end">
+              <input type="text" class="form-control gray" placeholder="Start tweeting!" aria-label="Start tweeting!"
+                aria-describedby="button-addon2">
+              <button class="btn btn-outline-secondary tw-btn" type="button" id="button-addon2"><i
+                  class="fa fa-twitter"></i></button>
+            </div>
+          </div>
+          <div class="tw-something bg-white p-4">
+            <p class="mb-4 lightblue fw-bold">NEW TWEETS</p>
+            <div class="border-top">
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside class="aside-opt">
+        <div class="follow d-flex justify-content-between">WHO TO FOLLOW
+          <a href="">
+            <i class="fa fa-sync gray my-auto ms-2"></i>
+          </a>
+        </div>
+        <div class="my-5 border-bottom">
+        </div>
+        <div class="follow d-flex justify-content-between">TRENDING
+          <a href="">
+            <i class="fa fa-cog gray my-auto ms-2"></i>
+          </a>
+        </div>
+        <ul class="gray fw-bold text-center">
+          <li>#sports</li>
+          <li>#microverse</li>
+          <li>#lorem</li>
+          <li>#ipsum</li>
+          <li>#coding</li>
+          <li>#blablabla</li>
+        </ul>
+      </aside>
+  </div>
+</div>
