@@ -1,0 +1,19 @@
+<div class="centered">
+  <%= render partial: 'shared/alert' %>
+  <%= image_tag('twitter-logo.svg', class: 'tw-logo centered')%>
+  <div class="container-fluid background rounded-pill shadow-lg">
+    <h1 class="d-flex welcome justify-content-center mb-3">Welcome</h1>
+    <div>
+      <div class="justify-content-center mt-3 mb-0">
+        <%= form_with model: @user, url: root_path do |f| %>
+          <div class="mb-2">
+            <% f.label :username %>
+            <%= f.text_field :username, placeholder: 'Username', method: :create, class: 'username' %>
+          </div>
+      </div>
+        <div class="d-flex justify-content-center mt-3 mb-3"><%= f.submit 'LOG IN', class: 'login' %></div>
+      <% end %>
+      <%= link_to "Don't have an account?", new_registration_path, method: :get %>
+    </div>
+  </div>
+</div>
