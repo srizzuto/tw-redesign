@@ -1,0 +1,41 @@
+<div class="right-container">
+    <%= render partial: 'shared/header'%>
+    <div class="d-flex w-100 h-100">
+      <div class="w-100">
+        <div class="cover-img align-middle">
+          <img src="assets/images/cover-default.jpg" alt="Cover Image" class="w-100 h-100">
+        </div>
+        <ul class="nav nav-tabs mb-3">
+          <li class="dark-gray fw-bold border-bottom border-5 border-lightblue">TWEETS</li>
+          <li class="gray">PHOTOS</li>
+          <li class="gray">VIDEOS</li>
+          <li class="gray">FOLLOWERS</li>
+          <li class="gray">FOLLOWING</li>
+          <li class="gray">FAVOURITES</li>
+          <li class="gray">LISTS</li>
+        </ul>
+        <div>
+          <div class="tw-something bg-white p-4">
+            <p class="mb-4 lightblue fw-bold">LAST TWEETS</p>
+            <div class="border-top">
+            </div>
+            <ul>
+              <li>
+                <div class="d-flex">
+                  <span><img src="/assets/images/blank-pfp.png" alt="" class="f-pfp me-2"></span>
+                  <span>
+                    <p class="my-1 fw-bold text-start dark-gray">Username</p>
+                    <p class="my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ducimus repellat,
+                      dolorum at similique veniam labore excepturi non illo pariatur fuga aspernatur eveniet sunt maxime
+                      ut unde laboriosam rerum doloribus?</p>
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    <%= render partial:'shared/aside_trending'%>
+    </div>
+  </div>

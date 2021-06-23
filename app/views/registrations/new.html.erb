@@ -16,12 +16,11 @@
           <div>
             <% f.label :fullname %>
             <%= f.text_field :fullname, placeholder: 'Fullname (4-10 char)', method: :create, class: 'username' %>
-            
           </div>
       </div>
         <div class="d-flex justify-content-center mt-3 mb-3"><%= f.submit 'CREATE USER', class: 'login' %></div>
       <% end %>
-      <%= link_to "Already have an account?", root_path, method: :get %>
+      <%= link_to "Already have an account?", registrations_path, method: :get %>
     </div>
   </div>
 </div>

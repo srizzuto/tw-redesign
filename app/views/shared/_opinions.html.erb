@@ -1,0 +1,29 @@
+<div class="right-container">
+    <%= render partial: 'shared/header'%>
+    <div class="d-flex w-100 h-100">
+      <div class="w-100">
+        <ul class="nav nav-tabs mb-3">
+          <li class="dark-gray fw-bold border-bottom border-5 border-lightblue">TWEETS</li>
+          <li class="gray">PHOTOS</li>
+          <li class="gray">VIDEOS</li>
+        </ul>
+        <div>
+          <div class="tw-something bg-white p-4">
+            <p>TWEET SOMETHING</p>
+            <div class="input-group border-end">
+              <input type="text" class="form-control gray" placeholder="Start tweeting!" aria-label="Start tweeting!"
+                aria-describedby="button-addon2">
+              <button class="btn btn-outline-secondary tw-btn" type="button" id="button-addon2"><i
+                  class="fa fa-twitter"></i></button>
+            </div>
+          </div>
+          <div class="tw-something bg-white p-4">
+            <p class="mb-4 lightblue fw-bold">NEW TWEETS</p>
+            <div class="border-top">
+            </div>
+          </div>
+        </div>
+      </div>
+      <%= render partial: 'shared/aside_trending'%>
+  </div>
+</div>
