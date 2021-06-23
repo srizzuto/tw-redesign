@@ -15,7 +15,7 @@
 
 ## Live Demo
 
-[Visit our website](https://tranquil-chamber-60677.herokuapp.com/)
+[Visit the website](https://git.heroku.com/still-chamber-05044.git)
 
 
 ## Getting Started
