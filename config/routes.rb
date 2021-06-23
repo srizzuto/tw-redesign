@@ -1,3 +1,13 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  resources :registrations, only: [:index, :new, :create]
+  resources :main
+  resources :opinions
+  resources :profiles
+  resources :followings
+  resources :connects, only: [:index]
+
+  delete '/logout', to: "main#destroy"
+
+  root to: "opinions#index"
 end

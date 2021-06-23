@@ -1,0 +1,5 @@
+<% if @user.errors[:fullname][0]%>
+  <span class="container alert alert-danger w-50">
+    Fullname <%= @user&.errors[:fullname][0] %>
+  </span>
+<% end %>
