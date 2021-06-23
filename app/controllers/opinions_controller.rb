@@ -1,17 +1,24 @@
 class OpinionsController < ApplicationController
 
-  #before_action :authenticate_user
+  before_action :authenticate_user
 
   def index
-    redirect_to registrations_path if session[:user_id] == nil
+    @opinion = Opinion.new
+    @opinions = Opinion.includes(:author).all.order('created_at DESC')
   end
 
   def create
-    
+    user = current_user
+    @opinion = user.opinions.build(opinions_params)
+    if @opinion.save
+      redirect_to root_path, notice: "Tweet posted!"
+    else
+      render :index, alert: "Something went wrong"
+    end
   end
 
   private
-  def opinons_params
-    params.require(:opinon).permit(:text)
+  def opinions_params
+    params.require(:opinion).permit(:text)
   end
 end

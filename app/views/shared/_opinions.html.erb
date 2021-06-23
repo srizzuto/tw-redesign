@@ -10,16 +10,19 @@
         <div>
           <div class="tw-something bg-white p-4">
             <p>TWEET SOMETHING</p>
+            <%= form_with model: @opinion do |f| %>
+            
             <div class="input-group border-end">
-              <input type="text" class="form-control gray" placeholder="Start tweeting!" aria-label="Start tweeting!"
-                aria-describedby="button-addon2">
-              <button class="btn btn-outline-secondary tw-btn" type="button" id="button-addon2"><i
+              <%= f.text_field :text, class:"form-control gray", placeholder: "Start tweeting!" %>
+              <button class="btn btn-outline-secondary tw-btn" type="submit" id="button-addon2"><i
                   class="fa fa-twitter"></i></button>
             </div>
+            <% end %>
           </div>
           <div class="tw-something bg-white p-4">
             <p class="mb-4 lightblue fw-bold">NEW TWEETS</p>
             <div class="border-top">
+              <%= render @opinions %>
             </div>
           </div>
         </div>

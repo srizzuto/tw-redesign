@@ -1,12 +1,7 @@
 class ApplicationController < ActionController::Base
 
-
   def authenticate_user
-    unless session[:user_id] == nil
-      redirect_to main_index_path
-    else 
-      redirect_to root_path
-    end
+    redirect_to registrations_path if session[:user_id] == nil
   end
 
   def current_user

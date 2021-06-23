@@ -1,0 +1,43 @@
+// Place all the styles related to the userpages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import "colorNfonts";
+
+.cover-img {
+  width: 100%;
+  height: 25%;
+}
+
+.pfp-container {
+  height: 25%;
+  border-bottom: 1px solid #dee2e6;
+  color: $gray;
+}
+
+.pfp-icons {
+  font-size: 35px;
+}
+
+.pfp {
+  height: 50%;
+  width: 50%;
+}
+
+.f-by {
+  display: flex;
+  padding: 17.5px;
+  color: $gray;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.f-pfp {
+  height: 55px;
+  width: 55px;
+}
+
+.f-icons {
+  font-size: 25px;
+  margin: auto 0;
+  color: $gray;
+}
