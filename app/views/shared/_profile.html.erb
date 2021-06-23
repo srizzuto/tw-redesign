@@ -23,10 +23,21 @@
               <% user.opinions.order_by_most_recent.each do |opinion| %>
                 <li>
                   <div class="d-flex">
-                    <span><%= image_tag(opinion.author.photo, class: "f-pfp me-2")%></span>
                     <div>
-                      <p class="my-1 fw-bold text-start dark-gray"><%= link_to(opinion.author.fullname, profile_path(opinion.author))%><span class="ms-1 gray"><%= opinion.created_at.strftime("%Y/%m/%d") %></span></p>
-                      <p class="my-1"><%= opinion.text %></p>
+                      <%= image_tag(opinion.author.photo, class: "f-pfp me-2")%>
+                    </div>
+                    <div>
+                      <div class="d-flex w-100 justify-content-between">
+                        <div class="d-flex my-1 fw-bold text-start align-text-bottom dark-gray">
+                          <div>
+                            <%= link_to(opinion.author.fullname, profile_path(opinion.author), class: "dark-gray")%>
+                          </div>
+                          <span class="tw-date gray align-self-end">
+                            on <%= opinion.created_at.strftime("%Y/%m/%d") %>
+                          </span>
+                        </div>
+                      </div>
+                      <p class="my-1 dark-gray"><%= opinion.text %></p>
                     </div>
                   </div>
                 </li>

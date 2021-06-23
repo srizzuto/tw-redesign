@@ -1,13 +1,23 @@
-<%= form_with model: @user, url: profile_path do |f| %>
-  <div>
-    <%=f.label :photo%>
-    <%=f.file_field :photo, placeholder: "Username"%>
+<div class="centered">
+  <div class="edit-bg m-auto p-5">
+    <%= form_with model: @user, url: profile_path do |f| %>
+      <div class="d-flex text-start mb-3">
+        <%=f.label "Photo: ", class: "edit-photo fw-bold" %>
+        <%=f.file_field :photo, placeholder: "Username"%>
+      </div>
+      <div class="text-start  mb-3">
+        <%=f.label "Cover: ", class: "edit-cover fw-bold"%>
+        <%=f.file_field :cover_image, placeholder: "Username"%>
+      </div>
+      <div class="d-flex flex-column text-start  mb-3">
+        <%=f.label "Username: ", class: "edit-cover fw-bold"%>
+        <%=f.text_field :username, placeholder: "Username", class: "mb-2"%>
+        <%=f.label "Fullname: ", class: "edit-cover fw-bold"%>
+        <%=f.text_field :fullname, placeholder: "Fullname", class: "mb-2"%>
+      </div>
+      <%=f.submit "UPDATE", class: "btn-update" %>
+      <%= link_to "CANCEL", profile_path(current_user), class: "btn-cancel"  %>
+    <% end %>
+    
   </div>
-  <div>
-    <%=f.label :cover_image %>
-    <%=f.file_field :cover_image, placeholder: "Username"%>
-  </div>
-  <%=f.text_field :username, placeholder: "Username"%>
-  <%=f.text_field :fullname, placeholder: "Fullname"%>
-  <%=f.submit "Update" %>
-<% end %>
+</div>

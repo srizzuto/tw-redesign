@@ -2,8 +2,13 @@
   <div class="d-flex">
     <span><%= image_tag(opinion.author.photo, class: "f-pfp me-2")%></span>
     <div>
-      <p class="my-1 fw-bold text-start dark-gray"><%= link_to(opinion.author.fullname, profile_path(opinion.author))%><span class="ms-1 gray"><%= opinion.created_at.strftime("%Y/%m/%d") %></span></p>
-      <p class="my-1"><%= opinion.text %></p>
+      <div class="my-1 fw-bold text-start dark-gray">
+        <span><%= link_to(opinion.author.fullname, profile_path(opinion.author), class: "dark-gray")%></span>
+        <span class="ms-1 gray tw-date">
+          on <%= opinion.created_at.strftime("%Y/%m/%d") %>
+        </span>
+      </div>
+      <p class="my-1 dark-gray"><%= opinion.text %></p>
     </div>
   </div>
 </li>

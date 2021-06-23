@@ -1,4 +1,7 @@
-<div>
-  <%= follower.fullname %>
-  <%= following_btn(follower) %>
+<div class="d-flex justify-content-between align-items-center px-5 mb-2">
+  <div>
+    <span><%= image_tag(follower.photo, class: "f-pfp rounded-circle me-2")%></span>
+    <span><%= link_to(follower.fullname, profile_path(follower.id), class: "fw-bold dark-gray") %></span>
+  </div>
+  <span class="f-icons"><%= following_btn(follower) %></span>
 </div>
