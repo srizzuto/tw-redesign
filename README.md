@@ -15,7 +15,7 @@
 
 ## Live Demo
 
-[Visit the website](https://git.heroku.com/still-chamber-05044.git)
+[Visit the website](https://still-chamber-05044.herokuapp.com/)
 
 
 ## Getting Started
