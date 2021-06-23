@@ -1,6 +1,6 @@
-.![](https://ibb.co/nm2bsNR)
-.![](https://ibb.co/rm5LPhC)
-.![](https://ibb.co/QXGtswB)
+![](https://ibb.co/nm2bsNR)
+![](https://ibb.co/rm5LPhC)
+![](https://ibb.co/QXGtswB)
 
 # Twitter redesign with Ruby on Rails
 
