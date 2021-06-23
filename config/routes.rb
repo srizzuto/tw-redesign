@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :main
   resources :opinions
   resources :profiles
+  resources :followings
 
   delete '/logout', to: "main#destroy"
 

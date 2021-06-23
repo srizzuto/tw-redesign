@@ -5,6 +5,7 @@ class OpinionsController < ApplicationController
   def index
     @opinion = Opinion.new
     @opinions = Opinion.includes(:author).all.order('created_at DESC')
+    @people_to_follow = current_user.people_to_follow.order('created_at DESC')
   end
 
   def create

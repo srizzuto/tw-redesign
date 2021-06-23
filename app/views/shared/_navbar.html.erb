@@ -8,15 +8,19 @@
       <span>Number of Tweets</span>
     </div>
     <div class="d-flex py-3 justify-content-evenly f-borders">
-      <div><div class="text-center">1111</div><div>FOLLOWERS</div></div>
-      <div><div class="text-center">2222</div><div>FOLLOWING</div></div>
+      <div>
+        <div class="text-center"><%= current_user.followers.count %>
+      </div><div>FOLLOWERS</div></div>
+      <div>
+        <div class="text-center"><%= current_user.following_users.count%></div>
+      <div>FOLLOWING</div></div>
     </div>
   </div>
   <ul class="nav nav-pills flex-column">
     <li class="nav-item active opts" aria-current="page" href="#"><%= link_to root_path, class: "blue" do %><i class="nav-icons fas fa-home me-3"></i>HOME<%end%></a></li>
     <li class="nav-item opts"><a href="#" class="blue"><i class="nav-icons fas fa-at me-3"></i>CONNECT</a></li>
     <li class="nav-item opts"><a href="#" class="blue"><i class="nav-icons fas fa-hashtag me-3"></i>DISCOVER</li></a>
-    <li class="nav-item opts"><%= link_to profiles_path, class: "blue" do %><i class="nav-icons fas fa-user-circle me-3"></i>PROFILE<% end %></li>
+    <li class="nav-item opts"><%= link_to profile_path(current_user), class: "blue" do %><i class="nav-icons fas fa-user-circle me-3"></i>PROFILE<% end %></li>
     <li class="nav-item opts"><a href="#" class="blue"><i class="nav-icons fas fa-chart-pie me-3"></i>STATISTICS</a></li>
     <li class="nav-item opts"><%= link_to logout_path(:user_id), method: :delete, class: "blue" do %><i class="nav-icons fas fa-user-circle me-3"></i>LOG OUT<%end%></li>
   </ul>

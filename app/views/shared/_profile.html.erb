@@ -24,7 +24,7 @@
                 <div class="d-flex">
                   <span><img src="/assets/images/blank-pfp.png" alt="" class="f-pfp me-2"></span>
                   <span>
-                    <p class="my-1 fw-bold text-start dark-gray">Username</p>
+                    <p class="my-1 fw-bold text-start dark-gray"><%= user.fullname %></p>
                     <p class="my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ducimus repellat,
                       dolorum at similique veniam labore excepturi non illo pariatur fuga aspernatur eveniet sunt maxime
                       ut unde laboriosam rerum doloribus?</p>
@@ -36,6 +36,6 @@
 
         </div>
       </div>
-    <%= render partial:'shared/aside_followed'%>
+    <%= render 'shared/aside_followed', user: user %>
     </div>
   </div>
