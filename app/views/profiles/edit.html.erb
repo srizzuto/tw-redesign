@@ -1,0 +1,13 @@
+<%= form_with model: @user, url: profile_path do |f| %>
+  <div>
+    <%=f.label :photo%>
+    <%=f.file_field :photo, placeholder: "Username"%>
+  </div>
+  <div>
+    <%=f.label :cover_image %>
+    <%=f.file_field :cover_image, placeholder: "Username"%>
+  </div>
+  <%=f.text_field :username, placeholder: "Username"%>
+  <%=f.text_field :fullname, placeholder: "Fullname"%>
+  <%=f.submit "Update" %>
+<% end %>

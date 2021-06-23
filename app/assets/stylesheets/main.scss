@@ -105,3 +105,14 @@ li { padding: 15px; }
   text-align: center;
   vertical-align: middle;
 }
+
+.f-borders {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.nav-pfp {
+  height: 100%;
+  width: 50%;
+  border-radius: 100%;
+}

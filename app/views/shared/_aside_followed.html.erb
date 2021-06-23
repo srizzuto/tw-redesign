@@ -2,11 +2,10 @@
   <div class="pfp-container">
     <div class="d-flex mx-4 justify-content-center pt-4">
       <%= following_btn(user) %>
-
-      <img src="/assets/images/blank-pfp.png" alt="" class="pfp text-center">
-      <a href="">
-        <i class="fas fa-bars lightblue my-auto ms-2 pfp-icons"></i>
-      </a>
+      <%= image_tag(user.photo, class: "pfp text-center")%>
+      <% if user.id == current_user.id %>
+        <%= link_to "Edit", edit_profile_path(user) %>
+      <% end %>
     </div>
     <div class="text-center dark-gray fw-bold mb-1"><%= user.fullname %></div>
     <div class="text-center gray mb-4">Joined at: <%= user.created_at.strftime("%Y/%m/%d") %></div>

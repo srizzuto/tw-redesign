@@ -1,4 +1,9 @@
-<div>
-  <div><%= opinion.text %></div>
-  <div><%= opinion.author.fullname %></div>
-</div>
+<li>
+  <div class="d-flex">
+    <span><%= image_tag(opinion.author.photo, class: "f-pfp me-2")%></span>
+    <div>
+      <p class="my-1 fw-bold text-start dark-gray"><%= link_to(opinion.author.fullname, profile_path(opinion.author))%><span class="ms-1 gray"><%= opinion.created_at.strftime("%Y/%m/%d") %></span></p>
+      <p class="my-1"><%= opinion.text %></p>
+    </div>
+  </div>
+</li>
