@@ -1,7 +1,6 @@
 class ProfilesController < ApplicationController
-
   before_action :authenticate_user
-  before_action :check_login_user, only: [:edit, :update]
+  before_action :check_login_user, only: %i[edit update]
 
   def show
     @user = User.find(params[:id])
@@ -15,18 +14,17 @@ class ProfilesController < ApplicationController
   def update
     user = User.find(params[:id])
     if user.update(users_params)
-      redirect_to profile_path(user), notice: "User updated successfully"
+      redirect_to profile_path(user), notice: 'User updated successfully'
     else
-      redirect_to root_path, alert: "An error ocurred"
+      redirect_to root_path, alert: 'An error ocurred'
     end
   end
 
   private
+
   def check_login_user
     user = User.find(params[:id])
-    if !user&.id = current_user.id
-      redirect_to root_path
-    end
+    redirect_to root_path unless user&.id = current_user.id
   end
 
   def users_params

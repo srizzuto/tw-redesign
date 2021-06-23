@@ -1,5 +1,4 @@
 class OpinionsController < ApplicationController
-
   before_action :authenticate_user
 
   def index
@@ -12,13 +11,14 @@ class OpinionsController < ApplicationController
     user = current_user
     @opinion = user.opinions.build(opinions_params)
     if @opinion.save
-      redirect_to root_path, notice: "Tweet posted!"
+      redirect_to root_path, notice: 'Tweet posted!'
     else
-      render :index, alert: "Something went wrong"
+      render :index, alert: 'Something went wrong'
     end
   end
 
   private
+
   def opinions_params
     params.require(:opinion).permit(:text)
   end

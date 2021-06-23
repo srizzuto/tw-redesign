@@ -8,8 +8,10 @@
         <%= image_tag(user.photo, class: "pfp text-center" )%>
           <div class="w-100 align-middle ms-1">
             <% if user.id==current_user.id %>
-              <%= link_to "Edit" , edit_profile_path(user) %>
+              <%= link_to edit_profile_path(user) do %>
+                <i class="fa fa-pen gray my-auto ms-2"></i>
                 <% end %>
+              <% end %>
           </div>
       </div>
       <div class="text-center dark-gray fw-bold mb-1">
@@ -46,7 +48,7 @@
       <li>
         <div class="d-flex justify-content-between">
           <div class="d-flex">
-            <span><img src="/assets/images/blank-pfp.png" alt="" class="f-pfp me-2"></span>
+            <span><%= image_tag(follower.photo, class: "f-pfp me-2")%></span>
             <span>
               <%= link_to profile_path(follower) do %>
                 <p class="my-1 fw-bold text-start dark-gray">

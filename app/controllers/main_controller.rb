@@ -1,5 +1,4 @@
 class MainController < ApplicationController
-
   def create
     if session[:user_id]
       @user = User.find_by(id: session[:user_id])
@@ -19,5 +18,4 @@ class MainController < ApplicationController
     session[:user_id] = nil
     redirect_to registrations_path
   end
-
 end

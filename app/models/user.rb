@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-
   before_save :add_images
 
   has_many :opinions, foreign_key: :author_id
@@ -18,7 +17,7 @@ class User < ApplicationRecord
   end
 
   def people_to_follow
-    User.where.not(id: Array.wrap(following_users)).and( User.where.not(id: self.id))
+    User.where.not(id: Array.wrap(following_users)).and(User.where.not(id: id))
   end
 
   def following?(follower)
@@ -27,18 +26,25 @@ class User < ApplicationRecord
 
   def all_opinions
     Opinion.where(author: (following_users.to_a << self)).order_by_most_recent
-  end 
+  end
+
+  def rest_opinions
+    Opinion.where.not(author: (following_users.to_a << self)).order_by_most_recent
+  end
 
   private
+
+  # rubocop:disable Layout/LineLength
   def add_images
-    unless self.photo.attached?
-    self.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'blank-pfp.png')), filename: 'blank-pfp.png',
-    content_type: 'image/jpg')
+    unless photo.attached?
+      photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'blank-pfp.png')), filename: 'blank-pfp.png',
+                   content_type: 'image/jpg')
     end
-    
-    return if self.cover_image.attached?
-    
-    self.cover_image.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'cover-default.jpg')),
-    filename: 'cover-default.jpg', content_type: 'image/png')
-  end 
+
+    return if cover_image.attached?
+
+    cover_image.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'cover-default.jpg')),
+                       filename: 'cover-default.jpg', content_type: 'image/png')
+  end
+  # rubocop:enable Layout/LineLength
 end

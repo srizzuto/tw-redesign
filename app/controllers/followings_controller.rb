@@ -1,7 +1,6 @@
 class FollowingsController < ApplicationController
-
   before_action :authenticate_user
-  
+
   def create
     user = User.find(params[:id])
     if user && !current_user.following?(user)
@@ -9,10 +8,10 @@ class FollowingsController < ApplicationController
       if following.save
         redirect_to request.referrer, notice: "You started following #{user.fullname}"
       else
-        redirect_to request.referrer, alert: "Something went wrong"
+        redirect_to request.referrer, alert: 'Something went wrong'
       end
     else
-      redirect_to request.referrer, alert: "Invalid user"
+      redirect_to request.referrer, alert: 'Invalid user'
     end
   end
 
@@ -23,10 +22,10 @@ class FollowingsController < ApplicationController
       if following&.destroy
         redirect_to request.referrer, notice: "You unfollowed #{user.fullname}"
       else
-        redirect_to request.referrer, alert: "Something went wrong"
+        redirect_to request.referrer, alert: 'Something went wrong'
       end
     else
-      redirect_to request.referrer, alert: "Invalid user"
+      redirect_to request.referrer, alert: 'Invalid user'
     end
   end
 end

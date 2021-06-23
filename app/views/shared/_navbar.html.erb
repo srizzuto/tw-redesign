@@ -27,7 +27,7 @@
     <li class="nav-item active opts" aria-current="page" href="#">
       <%= link_to root_path, class: "blue" do %><i class="nav-icons fas fa-home me-3"></i>HOME<%end%></a>
     </li>
-    <li class="nav-item opts"><a href="#" class="blue"><i class="nav-icons fas fa-at me-3"></i>CONNECT</a></li>
+    <li class="nav-item opts"><%= link_to connects_path, class: "blue" do %><i class="nav-icons fas fa-at me-3"></i>CONNECT<%end%></li>
     <li class="nav-item opts">
       <%= link_to profile_path(current_user), class: "blue" do %><i
           class="nav-icons fas fa-user-circle me-3"></i>PROFILE<% end %>
