@@ -1,0 +1,53 @@
+@import "colorNfonts";
+@import "reset";
+
+.centered {
+  height: 100%;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.welcome {
+  font-size: 90px;
+  font-family: $open-sans;
+  font-weight: bold;
+  color: $light-gray;
+  text-shadow: 4px 4px 9px $dark-blue;
+}
+
+.background {
+  background-color: $light-blue;
+  border-top: 1px solid $dark-blue;
+  border-right: 1px solid $dark-blue;
+  border-bottom: 1px solid $dark-blue;
+  border-left: 1px solid $dark-blue;
+  box-shadow: 1px 1px 10px $dark-gray;
+  width: 40%;
+}
+
+.login {
+  color: $light-gray;
+  background-color: $blue;
+  width: 180px;
+  border-radius: 5px;
+  border-top: 2px solid $blue;
+  border-left: 2px solid $blue;
+}
+
+.username {
+  border-color: $light-gray;
+  text-align: center;
+  border-bottom: 2px solid $light-gray;
+  border-right: 2px solid $light-gray;
+  border-top: 2px solid $blue;
+  border-left: 2px solid $blue;
+}
+
+.tw-logo {
+  height: 250px;
+  width: 250px;
+  margin: 0 auto;
+}

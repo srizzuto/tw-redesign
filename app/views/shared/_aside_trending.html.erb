@@ -1,0 +1,27 @@
+<aside class="aside-opt">
+  <div class="follow d-flex justify-content-between">WHO TO FOLLOW
+    <a href="">
+      <i class="fa fa-sync gray my-auto ms-2"></i>
+    </a>
+  </div>
+  <div>
+    <% people_to_follow.each do |follower| %>
+      <%= render 'followings/follower', follower: follower %>
+    <% end %>
+  </div>
+  <div class="my-5 border-bottom">
+  </div>
+  <div class="follow d-flex justify-content-between">TRENDING
+    <a href="">
+      <i class="fa fa-cog gray my-auto ms-2"></i>
+    </a>
+  </div>
+  <ul class="gray fw-bold text-center">
+    <li>#sports</li>
+    <li>#microverse</li>
+    <li>#lorem</li>
+    <li>#ipsum</li>
+    <li>#coding</li>
+    <li>#blablabla</li>
+  </ul>
+</aside>
