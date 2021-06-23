@@ -1,3 +1,7 @@
+.![](https://ibb.co/nm2bsNR)
+.![](https://ibb.co/rm5LPhC)
+.![](https://ibb.co/QXGtswB)
+
 # Twitter redesign with Ruby on Rails
 
 > This project provides a social media website created with Ruby on Rails. I tried to implement a twitter redesign that shows the MVC applied to it, so the user will find that he/she can log in, create a post, follow someone or stop doing it, and even edit profile and cover picture.
