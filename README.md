@@ -48,10 +48,16 @@ Clone repository from github to your local drive by following these steps:
 
 The Navigation Bar on the left provides 4 interactions:
 1. <b>HOME</b>: The page where you land after login. Here you can tweet and see what you and the ones you are following posted
+
 2. <b>CONNECT</b>: This is the added feature. You wanna see what tweets are you missing? Click there and tweets of people that you are not following will be shown.
-3. <b>PROFILE</b>: This will send you to your Profile. From here you can see all your post and, on the right bar, you'll have access to your profile picture. You'll notice a Pen over the top right of picture: If you click there you can change your profil picture, cover image and even your username and fullname!
+
+3. <b>PROFILE</b>: This will send you to your Profile. From here you can see all your post and, on the right bar, you'll have access to your profile picture.
+
+You'll notice a Pen over the top right of picture: If you click there you can change your profil picture, cover image and even your username and fullname!
+
 Remember that if you click on the fullname of another user in the homepage, you'll be able to see his profile and the people this user follows. On the profile picture, you won't see the pen for editing, but instead on the top left of it there will be a `+` or `x` that allows you to either follor or unfollow the user!
-4. <b>LOG OUT</b>: Pretty much self-explained. This will log out the user and sent you to the login page again.
+
+4. <b>LOG OUT</b>: Pretty much self-explained. This will log out the user and send you to the login page again.
 
 ### Github Actions
 
