@@ -17,11 +17,6 @@
 
 [Visit our website](https://tranquil-chamber-60677.herokuapp.com/)
 
-
-## Getting Started
-
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
 Ruby: 3.0.0
@@ -30,18 +25,33 @@ Postgres: >=9.5
 
 ### Setup
 
-Instal gems with:
+Clone repository from github to your local drive by following these steps:
 
-```
-bundle install
-```
+- Go to the main page of the repository
+- Above the listed files, click the green Code button
+- You can clone the repository using:
+  - GitHub CLI: gh repo `$ git clone github.comsrizzuto/tw-redesign `.
+  - SSH:`$ git clone git@github.com:srizzuto/tw-redesign.git`.
+  - HTTPS:`$ git clone https://github.com/srizzuto/tw-redesign `.
+- Open Terminal
+- Change the current working directory to the location you want the cloned directory
+- Type one of the git clone commands listed above.
+- Press Enter to create your local clone
+- Remember: Yarn packages need to be installed by running the command <code>yarn install</code> for local setup. Otherwise, the app generates an error.
+- Install all the available gems with the command `bundle install`
+- Create a database by typing in the terminal <code>rails db:create</code> and then <code>rails db:migrate</code> to define changes to your database schema
+- For webpacker we need to run the command `rails webpacker:install`
+- Open your terminal and type <code>rails s</code>. After that join to localhost at `http://localhost:3000/`
+- Feel free to sign up or sign in and start tweeting!
 
-Setup database with:
+### Once in the app
 
-```
-   rails db:create
-   rails db:migrate
-```
+The Navigation Bar on the left provides 4 interactions:
+1. <b>HOME</b>: The page where you land after login. Here you can tweet and see what you and the ones you are following posted
+2. <b>CONNECT</b>: This is the added feature. You wanna see what tweets are you missing? Click there and tweets of people that you are not following will be shown.
+3. <b>PROFILE</b>: This will send you to your Profile. From here you can see all your post and, on the right bar, you'll have access to your profile picture. You will notice a Pen over the top right of picture: If you click there you can change your profil picture, cover image and even your username and fullname!
+Remember that if you click on the fullname of another user in the homepage, you'll be able to see his profile and the people this user follows. On the profile picture, you won't see the pen for editing, but instead on the top left of it there will be and 'X' that allows you to unfollow the user!
+4. <b>LOG OUT</b>: Pretty much self-explained. This will log out the user and sent you to the login page again.
 
 ### Github Actions
 
@@ -53,28 +63,11 @@ To make sure the linters' checks using Github Actions work properly, you should 
 4. Open a PR from the `feature/branch` when your work is done.
 
 
-### Usage
-
-Start server with:
-
-```
-    rails server
-```
-
-Open `http://localhost:3000/` in your browser.
-
 ### Run tests
 
 ```
     rpsec --format documentation
 ```
-
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
-
-### Deployment
-
-TBA
-
 ## Authors
 
 👤 **Sebastian Rizzuto**
