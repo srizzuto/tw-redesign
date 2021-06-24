@@ -57,7 +57,7 @@ You'll notice a Pen over the top right of picture: If you click there you can ch
 
 Remember that if you click on the fullname of another user in the homepage, you'll be able to see his profile and the people this user follows. On the profile picture, you won't see the pen for editing, but instead on the top left of it there will be a `+` or `x` that allows you to either follor or unfollow the user!
 
-4. <b>LOG OUT</b>: Pretty much self-explained. This will log out the user and sent you to the login page again.
+4. <b>LOG OUT</b>: Pretty much self-explained. This will log out the user and send you to the login page again.
 
 ### Github Actions
 
