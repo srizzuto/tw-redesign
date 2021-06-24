@@ -13,7 +13,7 @@
             <%= form_with model: @opinion do |f| %>
             
             <div class="input-group border-end">
-              <%= f.text_field :text, class:"form-control dark-gray", placeholder: "Start tweeting!" %>
+              <%= f.text_field :text, class:"form-control dark-gray tweeting", placeholder: "Start tweeting!", id: 'tweeting' %>
               <button class="btn btn-outline-secondary tw-btn" type="submit" id="button-addon2"><i
                   class="fa fa-twitter"></i></button>
             </div>
